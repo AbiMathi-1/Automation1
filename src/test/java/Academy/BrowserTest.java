@@ -19,7 +19,10 @@ public class BrowserTest {
 		System.out.println("Hello Guys");
 		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		WebDriver driver =new ChromeDriver();
-		driver.get("https://rahylshettyacademy.azurewebsites.net/webapp/");
+		/**
+		* driver.get("https://rahylshettyacademy.azurewebsites.net/webapp/");
+		**/
+		driver.get("http://localhost:8180/webapp/");		
 		String text =driver.findElement(By.cssSelector("h1")).getText();
 		System.out.println(text);
 		Assert.assertTrue(text.equalsIgnoreCase("RahulShettyAcademy.com Learning"));
